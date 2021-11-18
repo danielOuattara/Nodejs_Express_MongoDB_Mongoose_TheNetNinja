@@ -1,0 +1,5 @@
+0:00 -- node basics
+2:08 -- the global object
+9:21 -- modules & require
+18:49 -- node & the file system (creating, reading, deleting files etc)
+31:51 -- streams & buffers
