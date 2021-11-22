@@ -9,6 +9,7 @@ app.set("view engine", "ejs");
 app.listen(3030);
 
 // middleware static files: images, css, etc..
+// all files the server made accessible from frontend
 app.use(express.static("public"));
 
 app.use(morgan("dev"));

@@ -5,6 +5,7 @@
 
 const express = require("express");
 
+const blogs = require('./Data/blogs')
 // express app
 app = express();
 
@@ -17,12 +18,7 @@ app.set("view engine", "ejs");
 app.listen(3030);
 
 app.get("/", (req, res) => {
-    const blogs =  [
-        { title: "Yoshu finds eggs", snippet: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",},
-        { title: "Mario finds stars", snippet: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",},
-        { title: "How to garden efficientlyfinds", snippet: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",},
-    ];
-    
+
     res.render("index", {title: "Home", blogs});
 });
 

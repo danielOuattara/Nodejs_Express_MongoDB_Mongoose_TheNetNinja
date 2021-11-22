@@ -1,7 +1,7 @@
 
 
-// Basic express server 
-//----------------------
+/* Basic express server 
+--------------------------*/
 
 // const express = require("express");
 
@@ -10,16 +10,47 @@
 
 
 // // listen 
-// app.listen(3030);
+// app.listen(3030, () => {
+//     console.log('Connected on port 3030')
+// });
 
 // app.get("/", (req, res) => {
 //     res.send("<h1> Home page</h1>")
+
 // });
 
 
 
-// routing & html
-//-----------------------------------------------
+/* routing & html
+------------------*/
+
+// const express = require("express");
+
+// // express app
+// app= express();
+
+
+// // listen 
+// app.listen(3030);
+
+// app.get("/", (req, res) => { // 1
+//     res.sendFile("./views/index.html", {root: __dirname});
+// });
+
+// app.get("/", (req, res) => { // 2
+//     res.sendFile(__dirname +"/views/index.html");
+// });
+
+
+// app.get("/about", (req, res) => {
+//     res.sendFile("./views/about.html", { root: __dirname });
+// });
+
+
+
+
+/*  redirect
+----------------*/
 
 // const express = require("express");
 
@@ -33,41 +64,19 @@
 // app.get("/", (req, res) => {
 //     res.sendFile("./views/index.html", {root: __dirname});
 // });
-// app.get("/about", (req, res) => {
-//     res.sendFile("./views/about.html", { root: __dirname });
-// });
-
-
-
-
-// // redirect
-// //-----------------------------------------------
-
-// const express = require("express");
-
-// // express app
-// app= express();
-
-
-// // listen 
-// app.listen(3030);
-
-// app.get("/", (req, res) => {
-//     res.sendFile("./views/index.html", {root: __dirname});
-// });
 
 // app.get("/about", (req, res) => {
 //     res.sendFile("./views/about.html", { root: __dirname });
 // });
 
+// // redirects
 // app.get("/about-us", (req, res) => {
 //     res.redirect("./about");
 // });
 
 
-
-// 404
-//-----------------------------------------------
+/* 404
+-----------*/
 
 const express = require("express");
 

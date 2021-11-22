@@ -43,9 +43,8 @@ app.get("/add-blog", (req,res)=> {
         snippet:"snippet",
         body: "body"
     });
-
     blog.save()
-    .then( result => res.send(result) )
+    .then(result => res.send(result))
     .catch(err => console.log(err.message))
 
 })
@@ -58,17 +57,15 @@ app.get("/all-blogs", (req, res)=> {
 
 
 app.get("/blog", (req,res)=> {
-    Blog.findById("613ad2b0a9485915f7794c46")
+    Blog.findById("613ad5218b8bc92be51b3fd3")
     .then(result => res.send(result))
     .catch(err => console.log(err.message))
-
 });
-
 
 app.set("view engine", "ejs");
 
 // listen 
-;
+
 
 // middleware static files: images, css, etc..
 app.use(express.static("public"));
@@ -82,14 +79,14 @@ app.use((req,res, next) => {
     console.log("method : ", req.method );
     console.log("-------------------------------------");
     next();
-}) 
+});
 
 app.use((req,res, next) => {
     console.log("In the next middleware: ");
 
     console.log("-------------------------------------");
     next();
-}) 
+}); 
 
 app.get("/", (req, res) => {
     const blogs =  [
