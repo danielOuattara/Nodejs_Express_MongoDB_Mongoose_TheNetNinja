@@ -48,7 +48,6 @@
 
 
 
-
 /*  redirect
 ----------------*/
 
@@ -73,6 +72,7 @@
 // app.get("/about-us", (req, res) => {
 //     res.redirect("./about");
 // });
+
 
 
 /* 404

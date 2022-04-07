@@ -11,14 +11,15 @@ app = express();
 
 // register view engine
 app.set("view engine", "ejs");
-// app.set("views","myviews", "ejs"); // myviews = chosen place for views folder, default = views
+
+// myviews = chosen place for views folder, default = views
+// app.set("views","myviews", "ejs"); 
 
 
 // listen 
 app.listen(3030);
 
 app.get("/", (req, res) => {
-
     res.render("index", {title: "Home", blogs});
 });
 

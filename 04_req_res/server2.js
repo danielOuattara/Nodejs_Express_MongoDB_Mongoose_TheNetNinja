@@ -25,7 +25,7 @@
 //     console.log("Sever running on port 8080")
 // });
 
-
+//-------------------------------------------------------------------------
 
 // Response
 
@@ -59,13 +59,16 @@
 //     console.log("Sever running on port 8080")
 // });
 
-// Response
+//--------------------------------------------------------------------------
+
+// Response (below found on stackOverflow and updated by me)
 
 const http = require("http");
 const fs = require("fs");
 
 
 const server = http.createServer((req, res ) => {
+    console.log(req.url)
     fs.readFile( __dirname + '/public' + req.url, (err, data) => {
         if(!err) {
             const dotOffset = req.url.lastIndexOf('.');

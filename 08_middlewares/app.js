@@ -25,7 +25,6 @@ app.use((req,res, next) => {
 
 app.use((req,res, next) => {
     console.log("In the next middleware: ");
-
     console.log("-------------------------------------");
     next();
 }) 
@@ -42,7 +41,6 @@ app.get("/", (req, res) => {
 
 app.use((req, res, next) => {
     console.log("Never seenmiddleware: if enter '/' route ");
-
     console.log("-------------------------------------");
     next();
 })
